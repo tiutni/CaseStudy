@@ -1,11 +1,7 @@
 import React from 'react'
 import '../css/Play.css'
 
-function self_autoPlay() {
-  return (
-    document.getElementById('vid').play()
-  );
-}
+
 
 export default function Play() {
 
@@ -19,7 +15,6 @@ export default function Play() {
             muted={true}
             controls={true}
         ></video>
-        self_autoPlay();
     </div>
   );
 }
