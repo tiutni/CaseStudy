@@ -1,0 +1,203 @@
+* {
+    /* border: 1px solid greenyellow; */
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+body {
+    margin: 0;
+    background-color: rgb(20, 20, 20);
+    height: 200%;
+}
+.home {
+    position: relative;
+}
+video {
+    width: 100%;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 100px);
+    padding: 10px 50px;
+}
+.header {
+    display: flex;
+    line-height: 50px;
+}
+/* .logo {
+    color: red;
+    margin-right: 40px;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 36px;
+} */
+.NETFLIX {
+    width: 120px;
+    margin-right: 40px;
+    vertical-align: middle;
+}
+#home {
+    font-weight: 900;
+}
+#home:hover, #series:hover, #movie:hover, #trend:hover, #like:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.nav {
+    display: flex;
+    color: white;
+}
+.nav-item {
+    padding: 0 10px;
+    font-size: 14px;
+    margin: auto;
+}
+.nav-item > a {
+    color: white;
+}
+.menu {
+    display: flex;
+    margin-left: auto;
+    color: white;
+}
+.menu-item {
+    display: flex;
+    font-size: 18px;
+    padding: 0 15px;
+    margin: auto;
+}
+.rabbit {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    margin: auto;
+}
+.menu-open-icon {
+    font-size: 13px;
+    padding: 0 10px;
+    margin: auto;
+}
+.banner {
+    color: white;
+    padding: 50px 0;
+}
+.top10 {
+    vertical-align: middle;
+}
+.top2msg {
+    vertical-align: middle;
+}
+/* .title {
+    font-size: 72px;
+} */
+.badge {
+    font-size: 25px;
+    font-weight: 900;
+    padding: 15px 0;
+}
+.description {
+    width: 40%;
+    font-size: 18px;
+}
+.buttons {
+    display: flex;
+    padding: 20px 0;
+}
+.white-button {
+    color: black;
+    background-color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 18px;
+}
+.white-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.gray-button {
+    color: white;
+    background-color: rgba(170, 170, 170, .4);
+    padding: 10px 25px;
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 18px;
+    margin-left: 15px;
+}
+.gray-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.extra {
+    position: absolute;
+    top: 530;
+    right: 0;
+    width: 160px;
+    display: flex;
+}
+.replay-button {
+    display: inline-block;
+    font-size: 15px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 10px;
+}
+.replay-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.mute-button {
+    display: inline-block;
+    font-size: 15px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    margin: auto;
+    margin-right: 10px;
+}
+.mute-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.rating {
+    margin: auto;
+    background-color: rgba(170, 170, 170, .2);
+    font-size: 17px;
+    border-left: 3px solid white;
+    padding-left: 10px;
+    width: 100%;
+    line-height: 40px;
+}
+.category-list {
+    /* position: absolute;
+    top: 500px;
+    left: 50px;
+    width: calc(100% - 50px); */
+}
+.category .title {
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    padding: 15px 0;
+}
+.list {
+    display: flex;
+    /* overflow-x: hidden; */
+}
+.movie {
+    padding: 2px;
+}
+.movie:hover {
+    transform: scale(1.5);
+    transition: .1s;
+    transition-delay: .5s;
+}
+.movie img {
+    width: 230.13px;
+    border-radius: 4px;
+}
