@@ -15,8 +15,8 @@ export default function Play() {
             id='vid'
             src={process.env.PUBLIC_URL + '/resources/이상한변호사.mp4'}
             poster={process.env.PUBLIC_URL + '/resources/이상한변호사.jpg'} 
-            // autoplay={true}
-            // muted={true}
+            autoplay={true}
+            muted={true}
             controls={true}
         ></video>
         self_autoPlay();
