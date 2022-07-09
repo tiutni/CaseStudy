@@ -1,15 +1,25 @@
 import React from 'react'
-import '../../public/css/Play.css';
+import '../css/Play.css'
+
+function self_autoPlay() {
+  return (
+    document.getElementById('vid').play()
+  );
+}
 
 export default function Play() {
-    
+
   return (
     <div>
-      <div className="container">
-          <video poster="../../public/resources/이상한변호사.jpg" autoPlay muted controls>
-            <source src="../../public/resources/이상한변호사.mp4" type='video/mp4'></source>
-          </video>
-      </div>
+      <video
+            id='vid'
+            src={process.env.PUBLIC_URL + '/resources/이상한변호사.mp4'}
+            poster={process.env.PUBLIC_URL + '/resources/이상한변호사.jpg'} 
+            // autoplay={true}
+            // muted={true}
+            controls={true}
+        ></video>
+        self_autoPlay();
     </div>
   );
 }
