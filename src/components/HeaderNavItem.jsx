@@ -1,5 +1,48 @@
 import React, { Fragment } from 'react'
-import '../css/Browse.css'
+
+const navItemsObj = {
+    "items" : [
+        {
+            "id" : "home",
+            "word" : "홈"
+        },
+        {
+            "id" : "series",
+            "word" : "시리즈"
+        },
+        {
+            "id" : "movie",
+            "word" : "영화"
+        },
+        {
+            "id" : "trend",
+            "word" : "NEW! 요즘 대세 콘텐츠"
+        },
+        {
+            "id" : "like",
+            "word" : "내가 찜한 콘텐츠"
+        }
+    ]
+}
+
+const NavItems = navItemsObj.items.map(item => {
+        return (
+            <div className="nav-item" key={item.id} id={item.id}>
+                <a href='#'>{item.word}</a>
+            </div>
+        )
+})
+
+export default function HeaderNavItem() {
+
+    return (
+        <Fragment>
+            {NavItems}
+        </Fragment>
+    )
+}
+
+/*
 
 // const navItemWord = {
 //     "navItemWords": [
@@ -295,44 +338,4 @@ import '../css/Browse.css'
 
 //
 
-const navItems = {
-    "items" : [
-        {
-            "id" : "home",
-            "word" : "홈"
-        },
-        {
-            "id" : "series",
-            "word" : "시리즈"
-        },
-        {
-            "id" : "movie",
-            "word" : "영화"
-        },
-        {
-            "id" : "trend",
-            "word" : "NEW! 요즘 대세 콘텐츠"
-        },
-        {
-            "id" : "like",
-            "word" : "내가 찜한 콘텐츠"
-        }
-    ]
-}
-
-const NavItems = navItems.items.map(item => {
-        return (
-            <div className="nav-item" id={item.id}>
-                <a href='#'>{item.word}</a>
-            </div>
-        )
-})
-
-export default function HeaderNavItem() {
-
-    return (
-        <Fragment>
-            {NavItems}
-        </Fragment>
-    )
-}
+*/

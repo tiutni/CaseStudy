@@ -1,6 +1,7 @@
 import React from 'react'
 import '../css/Browse.css'
 import HeaderNavItem from '../components/HeaderNavItem'
+import HeaderMenuItem from '../components/HeaderMenuItem';
 
 function play() {
     document.querySelector('video').load()
@@ -33,27 +34,16 @@ export default function Browse() {
                 </div>
                 <div className="overlay">
                     <div className="header">
-                        <a href="#">
-                            <img src="https://about.netflix.com/images/logo.png" alt="logo" className="NETFLIX" />
-                        </a>
+                        <div>
+                            <a href="#">
+                                <img src="https://about.netflix.com/images/logo.png" alt="logo" className="NETFLIX_LOGO" />
+                            </a>
+                        </div>
                         <div className="nav">
                             <HeaderNavItem></HeaderNavItem>
                         </div>
                         <div className="menu">
-                            <div className="menu-item">
-                                <a href="#"><i className="fa-solid fa-magnifying-glass" /></a>
-                            </div>
-                            <div className="menu-item">
-                                <a href="#"><i className="fa-solid fa-bell" /></a>
-                            </div>
-                            <div className="menu-item">
-                                <a href="#">
-                                    <img src={process.env.PUBLIC_URL + "/resources/토끼.png"} alt="토끼" className="rabbit" />
-                                </a>
-                                <div className="menu-open-icon">
-                                    <i className="fa-solid fa-caret-down" />
-                                </div>
-                            </div>
+                            <HeaderMenuItem></HeaderMenuItem>
                         </div>
                     </div>
                     <div className="banner">

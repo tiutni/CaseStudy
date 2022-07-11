@@ -27,7 +27,7 @@ video {
     display: flex;
     line-height: 50px;
 }
-.NETFLIX {
+.NETFLIX_LOGO {
     width: 120px;
     margin-right: 40px;
     vertical-align: middle;
@@ -61,8 +61,12 @@ video {
     margin: auto;
     vertical-align: middle;
 }
-.menu-item > a > i {
-    vertical-align: middle;
+.menu-item > a {
+    display: flex;
+}
+.menu-open-icon:hover {
+    transition: 0.5s;
+    transform: rotate(180deg);
 }
 .rabbit {
     width: 30px;
@@ -75,6 +79,9 @@ video {
     font-size: 13px;
     padding: 0 10px;
     margin: auto;
+}
+.menu-item > a > div > i {
+    vertical-align: middle;
 }
 .banner {
     color: white;
