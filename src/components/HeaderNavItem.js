@@ -167,38 +167,81 @@ import '../css/Browse.css'
 
 //
 
-const navItems = {
-    "words": [
-        "홈",
-        "시리즈",
-        "영화",
-        "NEW! 요즘 대세 콘텐츠",
-        "내가 찜한 콘텐츠"
-    ],
-    "ids" : [
-        "home",
-        "series",
-        "movie",
-        "trend",
-        "like"
-    ]
-}
+// const navItems = {
+//     "words": [
+//         "홈",
+//         "시리즈",
+//         "영화",
+//         "NEW! 요즘 대세 콘텐츠",
+//         "내가 찜한 콘텐츠"
+//     ],
+//     "ids": [
+//         "home",
+//         "series",
+//         "movie",
+//         "trend",
+//         "like"
+//     ]
+// }
 
-const MyNavItems = (data) => data.map((Item) => {
-    const { words, ids } = Item;
-    return (
-        <div className="nav-item" id={ids}>
-            <a href='#'>{words}</a>
-        </div>
-    )
-})
+// const MyNavItems = (data) => data.map((Item) => {
+//     const { words, ids } = Item;
+//     return (
+//         <div className="nav-item" id={ids}>
+//             <a href='#'>{words}</a>
+//         </div>
+//     )
+// })
 
-export default function HeaderNavItem() {
+// export default function HeaderNavItem() {
 
-    return (
-        <Fragment>
-            {MyNavItems(navItems)}
-        </Fragment>
-    )
-}
+//     return (
+//         <Fragment>
+//             {MyNavItems(navItems)}
+//         </Fragment>
+//     )
+// }
+
+//
+
+// const navItems = {
+//     items : [
+//         {
+//             "words": [
+//                 "홈",
+//                 "시리즈",
+//                 "영화",
+//                 "NEW! 요즘 대세 콘텐츠",
+//                 "내가 찜한 콘텐츠"
+//             ],
+//             "ids": [
+//                 "home",
+//                 "series",
+//                 "movie",
+//                 "trend",
+//                 "like"
+//             ]
+//         }
+//     ]
+// }
+
+// const MyNavItems = (data) => data.map((items) => {
+//     const { words, ids } = items;
+//     return (
+//         <div className="nav-item" id={ids}>
+//             <a href='#'>{words}</a>
+//         </div>
+//     )
+// })
+
+// export default function HeaderNavItem() {
+
+//     return (
+//         <Fragment>
+//             {MyNavItems(navItems.items)}
+//         </Fragment>
+//     )
+// }
+// //이렇게하면 id랑 word에 각각 한번에 주르륵 주르륵 들어감
+//
 
