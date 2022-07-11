@@ -245,43 +245,87 @@ import '../css/Browse.css'
 // //이렇게하면 id랑 word에 각각 한번에 주르륵 주르륵 들어감
 //
 
-const navItems = 
-{
-    "words": [
-        "홈",
-        "시리즈",
-        "영화",
-        "NEW! 요즘 대세 콘텐츠",
-        "내가 찜한 콘텐츠"
-    ],
-    "ids": [
-        "home",
-        "series",
-        "movie",
-        "trend",
-        "like"
-    ]
-}
+// const navItems = 
+// {
+//     "words": [
+//         "홈",
+//         "시리즈",
+//         "영화",
+//         "NEW! 요즘 대세 콘텐츠",
+//         "내가 찜한 콘텐츠"
+//     ],
+//     "ids": [
+//         "home",
+//         "series",
+//         "movie",
+//         "trend",
+//         "like"
+//     ]
+// }
 
-// const Words = navItems.words.map(word => {
-//     return (
-//         <a href='#'>{word}</a>
-//     );
-// })
+// // const Words = navItems.words.map(word => {
+// //     return (
+// //         <a href='#'>{word}</a>
+// //     );
+// // })
 
-// const Ids = navItems.ids.map(id => {
+// // const Ids = navItems.ids.map(id => {
+// //     return (
+// //         <div className="nav-item" id={id}>
+// //         </div>
+// //     )
+// // })
+
+// const NavItems = navItems.map((word, id) => {
 //     return (
 //         <div className="nav-item" id={id}>
+//             <a href='#'>{word}</a>
 //         </div>
 //     )
 // })
 
-const NavItems = navItems.map((word, id) => {
-    return (
-        <div className="nav-item" id={id}>
-            <a href='#'>{word}</a>
-        </div>
-    )
+// export default function HeaderNavItem() {
+
+//     return (
+//         <Fragment>
+//             {NavItems}
+//         </Fragment>
+//     )
+// }
+
+//
+
+const navItems = {
+    "items" : [
+        {
+            "id" : "home",
+            "word" : "홈"
+        },
+        {
+            "id" : "series",
+            "word" : "시리즈"
+        },
+        {
+            "id" : "movie",
+            "word" : "영화"
+        },
+        {
+            "id" : "trend",
+            "word" : "NEW! 요즘 대세 콘텐츠"
+        },
+        {
+            "id" : "like",
+            "word" : "내가 찜한 콘텐츠"
+        }
+    ]
+}
+
+const NavItems = navItems.items.map(item => {
+        return (
+            <div className="nav-item" id={item.id}>
+                <a href='#'>{item.word}</a>
+            </div>
+        )
 })
 
 export default function HeaderNavItem() {
