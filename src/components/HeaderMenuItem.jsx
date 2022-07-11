@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react'
 
-const Items = {
-    "items" : [
+const MenuItemsObj = {
+    "menuItems" : [
         {
-            "id" : "search"
+            "id" : "menu-search"
             ,"iClassName" : "fa-solid fa-magnifying-glass"
         },
         {
-            "id" : "alert"
+            "id" : "menu-alert"
             ,"iClassName" : "fa-solid fa-bell"
         },
         {
@@ -19,21 +19,21 @@ const Items = {
     ]
 }
 
-const MenuItems = Items.items.map(item => {
+const MenuItems = MenuItemsObj.menuItems.map(menuItem => {
     return (
         <Fragment>
-            {item.id === "menu-open" ? 
-                <div className="menu-item" key={item.id}>
+            {menuItem.id === "menu-open" ? 
+                <div className="menu-item" key={menuItem.id}>
                     <a href="#">
-                        {item.img}
-                        <div className={item.divClassName}>
-                            <i className={item.iClassName} />
+                        {menuItem.img}
+                        <div className={menuItem.divClassName}>
+                            <i className={menuItem.iClassName}/>
                         </div>
                     </a>
                 </div>
             :
-                <div className="menu-item" key={item.id}>
-                    <a href="#"><i className={item.iClassName} /></a>
+                <div className="menu-item" key={menuItem.id}>
+                    <a href="#"><i className={menuItem.iClassName}/></a>
                 </div>
             }
         </Fragment>

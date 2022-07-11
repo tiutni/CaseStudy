@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 // import Intro from './pages/Intro'
 // import Play from './pages/Play'
 import Browse from './pages/Browse'
@@ -6,11 +6,11 @@ import Browse from './pages/Browse'
 
 export default function App() {
   return (
-    <div>
+    <Fragment>
       {/* <Play></Play> */}
       <Browse></Browse>
       {/* <Intro></Intro> */}
       {/* <Test></Test> */}
-    </div>
+    </Fragment>
   )
 }

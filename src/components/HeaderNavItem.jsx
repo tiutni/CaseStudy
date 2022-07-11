@@ -5,20 +5,20 @@ const navItemsObj = {
         {
             "id" : "home",
             "word" : "홈"
-        },
-        {
+        }
+        ,{
             "id" : "series",
             "word" : "시리즈"
-        },
-        {
+        }
+        ,{
             "id" : "movie",
             "word" : "영화"
-        },
-        {
+        }
+        ,{
             "id" : "trend",
             "word" : "NEW! 요즘 대세 콘텐츠"
-        },
-        {
+        }
+        ,{
             "id" : "like",
             "word" : "내가 찜한 콘텐츠"
         }

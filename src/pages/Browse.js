@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import '../css/Browse.css'
 import HeaderNavItem from '../components/HeaderNavItem'
 import HeaderMenuItem from '../components/HeaderMenuItem';
+import Movie from '../components/Movie';
 
 function play() {
     document.querySelector('video').load()
@@ -22,7 +23,7 @@ function move_list_to_play() {
 export default function Browse() {
 
     return (
-        <div>
+        <Fragment>
             <div className="home">
                 <video
                     src={process.env.PUBLIC_URL + '/resources/이상한변호사.mp4'}
@@ -34,7 +35,7 @@ export default function Browse() {
                 </div>
                 <div className="overlay">
                     <div className="header">
-                        <div>
+                        <div className='logo'>
                             <a href="#">
                                 <img src="https://about.netflix.com/images/logo.png" alt="logo" className="NETFLIX_LOGO" />
                             </a>
@@ -87,7 +88,8 @@ export default function Browse() {
                                 넷플릭스 인기 콘텐츠
                             </div>
                             <div className="list">
-                                <div className="movie">
+                                <Movie></Movie>
+                                {/* <div className="movie">
                                     <img src={process.env.PUBLIC_URL + "/resources/인기1.jpg"} alt="인기1" />
                                 </div>
                                 <div className="movie">
@@ -104,7 +106,7 @@ export default function Browse() {
                                 </div>
                                 <div className="movie">
                                     <img src={process.env.PUBLIC_URL + "/resources/인기6.jpg"} alt="인기6" />
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         <div className="category">
@@ -173,6 +175,6 @@ export default function Browse() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Fragment>
     );
 }
