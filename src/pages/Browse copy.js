@@ -1,6 +1,5 @@
 import React from 'react'
 import '../css/Browse.css'
-import HeaderNavItem from '../components/HeaderNavItem'
 
 function play() {
     document.querySelector('video').load()
@@ -37,7 +36,21 @@ export default function Browse() {
                             <img src="https://about.netflix.com/images/logo.png" alt="logo" className="NETFLIX" />
                         </a>
                         <div className="nav">
-                            <HeaderNavItem></HeaderNavItem>
+                            <div className="nav-item" id="home">
+                                <a href='#'>홈</a>
+                            </div>
+                            <div className="nav-item" id="series">
+                                <a href="#">시리즈</a>
+                            </div>
+                            <div className="nav-item" id="movie">
+                                <a href="#">영화</a>
+                            </div>
+                            <div className="nav-item" id="trend">
+                                <a href="#">NEW! 요즘 대세 콘텐츠</a>
+                            </div>
+                            <div className="nav-item" id="like">
+                                <a href="#">내가 찜한 콘텐츠</a>
+                            </div>
                         </div>
                         <div className="menu">
                             <div className="menu-item">
