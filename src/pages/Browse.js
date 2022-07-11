@@ -3,6 +3,8 @@ import '../css/Browse.css'
 import HeaderNavItem from '../components/HeaderNavItem'
 import HeaderMenuItem from '../components/HeaderMenuItem';
 import Movie from '../components/Movie';
+import HotMovieObj from '../data/HotMovieObj';
+import CustomMovieObj from '../data/CustomMovieObj';
 
 function play() {
     document.querySelector('video').load()
@@ -88,25 +90,7 @@ export default function Browse() {
                                 넷플릭스 인기 콘텐츠
                             </div>
                             <div className="list">
-                                <Movie></Movie>
-                                {/* <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/인기1.jpg"} alt="인기1" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/인기2.jpg"} alt="인기2" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/인기3.jpg"} alt="인기3" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/인기4.jpg"} alt="인기4" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/인기5.jpg"} alt="인기5" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/인기6.jpg"} alt="인기6" />
-                                </div> */}
+                                <Movie data={HotMovieObj.movies}></Movie>
                             </div>
                         </div>
                         <div className="category">
@@ -114,12 +98,7 @@ export default function Browse() {
                                 양이 님이 시청 중인 콘텐츠
                             </div>
                             <div className="list">
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/양이1.webp"} alt="양이1" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/양이2.webp"} alt="양이2" />
-                                </div>
+                                <Movie data={CustomMovieObj.movies} />
                             </div>
                         </div>
                         <div className="category">

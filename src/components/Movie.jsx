@@ -1,29 +1,15 @@
 import React, { Fragment } from 'react'
+// import movieObj from '../data/movieObj';
 
-const movieObj = {
-    "movies" : [
-        {
-            "name" : "인기1"
-        }
-        ,{
-            "name" : "인기2"
-        }
-        ,{
-            "name" : "인기3"
-        }
-        ,{
-            "name" : "인기4"
-        }
-        ,{
-            "name" : "인기5"
-        }
-        ,{
-            "name" : "인기6"
-        }
-    ]
-}
+// const MovieList = movieObj.movies.map(movie => {
+//     return (
+//         <div className="movie" key={movie.name}>
+//             <img src={process.env.PUBLIC_URL + "/resources/" + movie.name + ".jpg"} alt={movie.name} />
+//         </div>
+//     );
+// })
 
-const MovieList = movieObj.movies.map(movie => {
+const MovieList = (data) => data.map(movie => {
     return (
         <div className="movie" key={movie.name}>
             <img src={process.env.PUBLIC_URL + "/resources/" + movie.name + ".jpg"} alt={movie.name} />
@@ -31,10 +17,10 @@ const MovieList = movieObj.movies.map(movie => {
     );
 })
 
-export default function Movie() {
+export default function Movie(props) {
     return (
         <Fragment>
-            {MovieList}
+            {MovieList(props.data)}
         </Fragment>
     )
 }
