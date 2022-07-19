@@ -2,7 +2,7 @@
     "users" : [
         {
             "email" : "test1@example.com"
-            , "pw" : "test1@"
+            , "pw" : "test1234@@@"
         }
     ]
 }
