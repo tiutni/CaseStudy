@@ -1,16 +1,21 @@
-import React, { Fragment } from 'react'
-// import Intro from './pages/Intro'
-// import Play from './pages/Play'
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Intro from './pages/Intro' 
 import Browse from './pages/Browse'
-// import Test from './pages/Test'
+import Play from './pages/Play'
+import Login from './pages/Login'
 
-export default function App() {
+const App = () => {
   return (
-    <Fragment>
-      {/* <Play></Play> */}
-      <Browse></Browse>
-      {/* <Intro></Intro> */}
-      {/* <Test></Test> */}
-    </Fragment>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Intro/>} />
+      <Route path="/browse" element={<Browse/>} />
+      <Route path="/play" element={<Play/>} />
+      <Route path="/login" element={<Login/>} />
+    </Routes>
+    </BrowserRouter>
   )
 }
+
+export default App;

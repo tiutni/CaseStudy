@@ -1,0 +1,104 @@
+body {
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/5fd505fa-f425-4a18-b3cc-00dd2638f541/9919b42b-9d37-4726-ab59-1df43235c4f1/KR-ko-20220704-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    line-height: 1;
+    filter: brightness(80%);
+}
+
+#netflex-login-logo {
+    width: 167px;
+    line-height: 80px;
+    margin-left: 2.4rem;
+    padding-top: 1rem;
+}
+
+#netflex-login-logo svg {
+    fill: #e50914;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+.secondary-text {
+    font-size: 13px;
+    margin-top: 1rem;
+    color: #8c8c8c;
+    line-height: 1rem;
+}
+
+.login-box {
+    width: 28rem;
+    margin: 0 auto;
+    min-height: 35rem;
+    border-radius: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 4rem 4rem 8rem 4rem;
+    margin-bottom: 5rem;
+}
+
+.login-box h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.login-box input {
+    background: #333;
+    width: 100%;
+    border-radius: 4px;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    padding: 5px 15px;
+    margin-bottom: 1rem;
+}
+
+.login-box button {
+    color: #fff;
+    line-height: 2.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    width: 100%;
+    background-color: #e50914;
+    margin-top: 1.5rem;
+}
+
+.login-guid-text,
+.login-guid-text2 {
+    font-size: 14px;
+}
+
+.now-sign-up {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.detail-knowing {
+    color: #0071eb;
+}
+
+.login-guid-text {
+    font-size: 13px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: #b3b3b3;
+}
+
+.login-guid-text2 {
+    margin-top: 5.5rem;
+    color: #737373;
+}
+
+.login-guid-text2 div:nth-of-type(1) {
+    font-size: 15px;
+}
+
+.login-guid-text input {
+    margin: 0;
+    width: 1rem;
+}

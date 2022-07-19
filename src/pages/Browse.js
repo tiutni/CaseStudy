@@ -1,28 +1,35 @@
 import React, { Fragment } from 'react'
+import '../css/Global.css'
 import '../css/Browse.css'
 import HeaderNavItem from '../components/HeaderNavItem'
 import HeaderMenuItem from '../components/HeaderMenuItem';
 import Movie from '../components/Movie';
 import HotMovieObj from '../data/HotMovieObj';
 import CustomMovieObj from '../data/CustomMovieObj';
+import NowMovieObj from '../data/NowMovieObj';
+import NewMovieObj from '../data/NewMovieObj';
+import Footer from '../components/Footer';
+import { Link, useNavigate } from 'react-router-dom';
 
-function play() {
-    document.querySelector('video').load()
-}
-function mute() {
-    var video = document.querySelector('video');
-    if ( video.muted ) {
-        video.muted = false;
-    } else {
-        video.muted = true;
+const Browse = () => {
+
+    const play = () => {
+        document.querySelector('video').load()
     }
-}
+    const mute =() => {
+        var video = document.querySelector('video');
+        if ( video.muted ) {
+            video.muted = false;
+        } else {
+            video.muted = true;
+        }
+    }
 
-function move_list_to_play() {
-    // location.href = "../Netflix_play/play.html";
-}
-
-export default function Browse() {
+    const navigate = useNavigate();
+    
+    const goToPlay = () => {
+        navigate('/play');
+    }
 
     return (
         <Fragment>
@@ -38,9 +45,9 @@ export default function Browse() {
                 <div className="overlay">
                     <div className="header">
                         <div className='logo'>
-                            <a href="#">
+                            <Link to="/browse">
                                 <img src="https://about.netflix.com/images/logo.png" alt="logo" className="NETFLIX_LOGO" />
-                            </a>
+                            </Link>
                         </div>
                         <div className="nav">
                             <HeaderNavItem></HeaderNavItem>
@@ -61,7 +68,7 @@ export default function Browse() {
                             천재적인 두뇌의 소유자 우영우. 대형 로펌의 신입 변호사이자 자폐 스펙트럼 장애를 가진 여성으로서 법정 안팎에서 다양한 난관을 헤쳐간다.
                         </div>
                         <div className="buttons">
-                            <div className="white-button" onClick={move_list_to_play}>
+                            <div className="white-button" onClick={goToPlay}>
                                 <i className="fa-solid fa-play" />
                                 &nbsp;
                                 재생
@@ -106,24 +113,7 @@ export default function Browse() {
                                 지금 뜨는 컨텐츠
                             </div>
                             <div className="list">
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/지금1.jpg"} alt="지금1" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/지금2.jpg"} alt="지금2" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/지금3.jpg"} alt="지금3" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/지금4.jpg"} alt="지금4" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/지금5.jpg"} alt="지금5" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/지금6.jpg"} alt="지금6" />
-                                </div>
+                                <Movie data={NowMovieObj.movies}/>
                             </div>
                         </div>
                         <div className="category">
@@ -131,29 +121,15 @@ export default function Browse() {
                                 새로 올라온 콘텐츠
                             </div>
                             <div className="list">
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/새로1.jpg"} alt="새로1" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/새로2.jpg"} alt="새로2" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/새로3.jpg"} alt="새로3" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/새로4.jpg"} alt="새로4" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/새로5.jpg"} alt="새로5" />
-                                </div>
-                                <div className="movie">
-                                    <img src={process.env.PUBLIC_URL + "/resources/새로6.jpg"} alt="새로6" />
-                                </div>
+                                <Movie data={NewMovieObj.movies}/>
                             </div>
                         </div>
                     </div>
+                    <Footer></Footer>
                 </div>
             </div>
         </Fragment>
     );
 }
+
+export default Browse;

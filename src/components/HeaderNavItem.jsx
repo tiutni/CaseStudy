@@ -1,39 +1,16 @@
 import React, { Fragment } from 'react'
+import { Link } from 'react-router-dom'
+import NavItemObj from '../data/NavItemObj';
 
-const navItemsObj = {
-    "items" : [
-        {
-            "id" : "home",
-            "word" : "홈"
-        }
-        ,{
-            "id" : "series",
-            "word" : "시리즈"
-        }
-        ,{
-            "id" : "movie",
-            "word" : "영화"
-        }
-        ,{
-            "id" : "trend",
-            "word" : "NEW! 요즘 대세 콘텐츠"
-        }
-        ,{
-            "id" : "like",
-            "word" : "내가 찜한 콘텐츠"
-        }
-    ]
-}
+const HeaderNavItem = () => {
 
-const NavItems = navItemsObj.items.map(item => {
+    const NavItems = NavItemObj.items.map(item => {
         return (
             <div className="nav-item" key={item.id} id={item.id}>
-                <a href='#'>{item.word}</a>
+                <Link to='#'>{item.word}</Link>
             </div>
         )
-})
-
-export default function HeaderNavItem() {
+    })
 
     return (
         <Fragment>
@@ -41,6 +18,8 @@ export default function HeaderNavItem() {
         </Fragment>
     )
 }
+
+export default HeaderNavItem;
 
 /*
 
@@ -68,7 +47,7 @@ export default function HeaderNavItem() {
 // const MyNavItemWord = navItemWord.navItemWords.map(word => {
 //     return (
 //         <div>
-//             <a href='#'>{word}</a>
+//             <Link to='#'>{word}</Link>
 //         </div>
 //     );
 // })
@@ -76,7 +55,7 @@ export default function HeaderNavItem() {
 // const MyNavItem = navItemId.navItemIds.map(navItemId => {
 //     return (
 //         <div className="nav-item" id={navItemId}>
-//             <a href='#'>{word}</a>
+//             <Link to='#'>{word}</Link>
 //         </div>
 //     )
 // })
@@ -99,7 +78,7 @@ export default function HeaderNavItem() {
 // const MyNavItemWord = navItemWord.navItemWords.map(word => {
 //     return (
 //         <div>
-//             <a href='#'>{word}</a>
+//             <Link to='#'>{word}</Link>
 //         </div>
 //     );
 // })
@@ -139,7 +118,7 @@ export default function HeaderNavItem() {
 //     for(let i = 0; i < navItem.words.length; i++) {
 //         result[i] = (
 //             <div className="nav-item" id={navItem.words[i]}>
-//                 <a href='#'>{navItem.ids[i]}</a>
+//                 <Link to='#'>{navItem.ids[i]}</Link>
 //             </div>
 //         )
 //     }
@@ -231,7 +210,7 @@ export default function HeaderNavItem() {
 //     const { words, ids } = Item;
 //     return (
 //         <div className="nav-item" id={ids}>
-//             <a href='#'>{words}</a>
+//             <Link to='#'>{words}</Link>
 //         </div>
 //     )
 // })
@@ -272,7 +251,7 @@ export default function HeaderNavItem() {
 //     const { words, ids } = items;
 //     return (
 //         <div className="nav-item" id={ids}>
-//             <a href='#'>{words}</a>
+//             <Link to='#'>{words}</Link>
 //         </div>
 //     )
 // })
@@ -308,7 +287,7 @@ export default function HeaderNavItem() {
 
 // // const Words = navItems.words.map(word => {
 // //     return (
-// //         <a href='#'>{word}</a>
+// //         <Link to='#'>{word}</Link>
 // //     );
 // // })
 
@@ -322,7 +301,7 @@ export default function HeaderNavItem() {
 // const NavItems = navItems.map((word, id) => {
 //     return (
 //         <div className="nav-item" id={id}>
-//             <a href='#'>{word}</a>
+//             <Link to='#'>{word}</Link>
 //         </div>
 //     )
 // })

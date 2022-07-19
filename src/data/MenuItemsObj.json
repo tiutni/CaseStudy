@@ -1,0 +1,17 @@
+{
+    "menuItems" : [
+        {
+            "id" : "menu-search"
+            ,"iClassName" : "fa-solid fa-magnifying-glass"
+        },
+        {
+            "id" : "menu-alert"
+            ,"iClassName" : "fa-solid fa-bell"
+        },
+        {
+            "id" : "menu-open"
+            ,"iClassName" : "fa-solid fa-caret-down"
+            ,"divClassName" : "menu-open-icon"
+        }
+    ]
+}

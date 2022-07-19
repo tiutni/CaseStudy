@@ -1,4 +1,4 @@
-const CustomMovieObj = {
+{
     "movies" : [
         {
             "name" : "양이1"
@@ -8,5 +8,3 @@ const CustomMovieObj = {
         }
     ]
 }
-
-export default CustomMovieObj;

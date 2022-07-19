@@ -1,4 +1,4 @@
-const HotMovieObj = {
+{
     "movies" : [
         {
             "name" : "인기1"
@@ -20,5 +20,3 @@ const HotMovieObj = {
         }
     ]
 }
-
-export default HotMovieObj;
