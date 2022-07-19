@@ -1,51 +1,59 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserObj from '../data/UserObj';
 
 const LoginBox = () => {
 
   const [email, setEmail] = useState('');
-    const [pw, setPw] = useState('');
+  const [pw, setPw] = useState('');
 
-    const [emailValid, setEmailValid] = useState(false);
-    const [pwValid, setPwValid] = useState(false);
-    const [notAllow, setNotAllow] = useState(true);
+  const [emailValid, setEmailValid] = useState(false);
+  const [pwValid, setPwValid] = useState(false);
+  const [notAllow, setNotAllow] = useState(true);
 
-    useEffect(() => {
-      if(emailValid && pwValid) {
-        setNotAllow(false);
-        return;
-      }
-      setNotAllow(true);
-    }, [emailValid, pwValid]);
-
-    const handleEmail = (e) => {
-      setEmail(e.target.value);
-      const regex =
-        /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
-      if (regex.test(e.target.value)) {
-        setEmailValid(true);
-      } else {
-        setEmailValid(false);
-      }
-    };
-    const handlePw = (e) => {
-      setPw(e.target.value);
-      const regex =
-        /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
-      if (regex.test(e.target.value)) {
-        setPwValid(true);
-      } else {
-        setPwValid(false);
-      }
-    };
-    const onClickConfirmButton = () => {
-      if(email === UserObj.users[0].email && pw === UserObj.users[0].pw) {
-        alert('로그인에 성공했습니다.')
-      } else {
-        alert("등록되지 않은 회원입니다.");
-      }
+  useEffect(() => {
+    if(emailValid && pwValid) {
+      setNotAllow(false);
+      return;
     }
+    setNotAllow(true);
+  }, [emailValid, pwValid]);
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+    const regex =
+      /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
+    if (regex.test(e.target.value)) {
+      setEmailValid(true);
+    } else {
+      setEmailValid(false);
+    }
+  };
+  const handlePw = (e) => {
+    setPw(e.target.value);
+    const regex =
+      /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,20}$/;
+    if (regex.test(e.target.value)) {
+      setPwValid(true);
+    } else {
+      setPwValid(false);
+    }
+  };
+
+  const navigate = useNavigate();
+
+  const goToBrowse = () => {
+    navigate('/browse');
+  }
+
+  const onClickConfirmButton = () => {
+    if(email === UserObj.users[0].email && pw === UserObj.users[0].pw) {
+      alert('로그인에 성공했습니다.')
+      goToBrowse();
+    } else {
+      alert("등록되지 않은 회원입니다.");
+    }
+  }
 
   return (
     <div>

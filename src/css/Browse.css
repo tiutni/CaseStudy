@@ -13,11 +13,18 @@ body {
 video {
     width: 100%;
 }
+
+.video-container::after {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: inset 80px 80px 150px #000000, inset -80px -80px 150px #000000;
+}
+
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100% - 100px);
+    /* width: calc(100% - 10px); */
+    width: calc(100%);
     padding: 10px 50px;
 }
 .header {
@@ -93,6 +100,13 @@ video {
 .title > img {
     width: 625px;
     height: 250px;
+    transition: 1.5s;
+    transform: scale(0.5);
+}
+.title-small {
+    /* margin-top: 250px;
+    width: 312px;
+    height: 125px; */
 }
 .badge {
     font-size: 25px;

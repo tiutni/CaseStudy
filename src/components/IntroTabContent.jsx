@@ -9,16 +9,17 @@ const IntroTabContent = () => {
                 {/* Tab Content 1 */}
                 <div id="tab-1-content" className="tab-content-item show">
                     <div className="tab-1-content-inner">
-                    <div>
-                        <p className="text-lg">
-                        더 이상 넷플릭스가 필요하지 않다면 - 걱정마세요.
-                        언제든지 온라인으로 해지할 수 있습니다.
-                        </p>
-                        <Link to="#" className="btn btn-lg">한달 무료 체험하기</Link>
-                    </div>
-                    <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="" />
+                        <div>
+                            <p className="text-lg">
+                            더 이상 넷플릭스가 필요하지 않다면 - 걱정마세요.
+                            언제든지 온라인으로 해지할 수 있습니다.
+                            </p>
+                            <Link to="#" className="btn btn-lg">한달 무료 체험하기</Link>
+                        </div>
+                        <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="" />
                     </div>
                 </div>
+
                 {/* Tab Content 2 */}
                 <div id="tab-2-content" className="tab-content-item">
                     <div className="tab-2-content-top">
@@ -58,6 +59,7 @@ const IntroTabContent = () => {
                     </div>
                     </div>
                 </div>
+
                 {/* Tab Content 3 */}
                 <div id="tab-3-content" className="tab-content-item">
                     <div className="text-center">

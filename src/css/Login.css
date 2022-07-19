@@ -1,4 +1,4 @@
-body {
+.login-wrapper {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://assets.nflxext.com/ffe/siteui/vlv3/5fd505fa-f425-4a18-b3cc-00dd2638f541/9919b42b-9d37-4726-ab59-1df43235c4f1/KR-ko-20220704-popsignuptwoweeks-perspective_alpha_website_large.jpg);
     /* background-color: rgba(0, 0, 0, 0.5); */
     /*
