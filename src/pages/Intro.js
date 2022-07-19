@@ -29,7 +29,7 @@ const Intro = () => {
       item.classList.remove('show');
     });
   }
-  
+    
   tabItems.forEach(item => {
     item.addEventListener('click', selectItem);
   });
@@ -47,9 +47,9 @@ const Intro = () => {
           <Link to="/browse" className="btn btn-xl">한달 무료 체험하기 <i className="fas fa-chevron-right btn-icon" /></Link>
         </div>
       </header>
-      <IntroTab></IntroTab>
-      <IntroTabContent></IntroTabContent>
-      <Footer></Footer>
+      <IntroTab/>
+      <IntroTabContent/>
+      <Footer/>
     </div>
   )
 }

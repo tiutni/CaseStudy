@@ -100,13 +100,13 @@ video {
 .title > img {
     width: 625px;
     height: 250px;
-    transition: 1.5s;
-    transform: scale(0.5);
+    /* transition: 2.0s;
+    transform: scale(0.5); */
 }
 .title-small {
-    /* margin-top: 250px;
+    margin-top: 250px;
     width: 312px;
-    height: 125px; */
+    height: 125px;
 }
 .badge {
     font-size: 25px;
